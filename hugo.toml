@@ -1,0 +1,13 @@
+baseURL = 'https://lucasotodegraeve.github.io/'
+languageCode = 'en-us'
+title = "Blog Luca"
+theme = 'paper'
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+
+rss = true
+disablePostNavigation = true
+monoDarkIcon = true
