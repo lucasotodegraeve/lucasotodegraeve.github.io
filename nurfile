@@ -1,0 +1,37 @@
+
+export def "nur build" [] {
+  build
+}
+
+export def "nur watch" [] {
+  watch . --glob=**/*.md {|| build}
+}
+
+export def "nur serve" [] {
+  caddy file-server --root pages/ --listen :8000
+}
+
+def build [] {
+  let content = ls content/**/* | where { $in.type == file } | each {|file|
+    let input = $file.name 
+    let ext = $input | path parse | get extension
+    let new_ext = if ($ext == "md") {"html"} else {$ext}
+    let base = ($input | path split | skip 1 | path join)
+    let output = "pages" | path join $base | path parse | upsert extension $new_ext | path join
+
+    {
+      input: $input,
+      output: $output,
+      is_md: ($ext == "md")
+    }
+  }
+
+  for file in $content {
+    mkdir ($file.output | path dirname)
+    if ($file.is_md) {
+      pandoc $file.input -s -o $file.output
+    } else {
+      cp $file.input $file.output
+    }
+  }
+}
