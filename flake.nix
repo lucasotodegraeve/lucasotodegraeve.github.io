@@ -1,19 +1,22 @@
 {
-  description = "Hugo flake";
+  description = "Blog flake";
+  inputs.nixpkgs.url = "nixpkgs/nixos-25.11";
 
-  inputs = {
-    nixpkgs.url = "nixpkgs/nixpkgs-unstable";
-  };
-
-  outputs = { self, nixpkgs }:
-  let 
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages."${system}";
+  outputs = {nixpkgs, ...}: let
+    supportedSystems = ["x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"];
+    forEachSupportedSystem = f:
+      nixpkgs.lib.genAttrs supportedSystems (system:
+        f {
+          pkgs = import nixpkgs {inherit system;};
+        });
   in {
-    devShells."${system}".default = pkgs.mkShell {
-      nativeBuildInputs = with pkgs; [
-        hugo
-      ];
-    };
+    devShells = forEachSupportedSystem ({pkgs}: {
+      default = pkgs.mkShell {
+        packages = with pkgs; [
+          pandoc
+          nushell
+        ];
+      };
+    });
   };
 }
