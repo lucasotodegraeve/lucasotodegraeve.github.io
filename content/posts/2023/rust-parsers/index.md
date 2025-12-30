@@ -9,19 +9,18 @@ date: 2023-11-22
   border-radius: .375rem;
 }
 .image-container {
-  display: flex;
   max-width: 100%;
 }
 .image-container img {
-  width: 33.33%
+  width: 32.33%;
 }
 </style>
 
 
 <div class="image-container white-bg">
-<img src="./rust-logo.svg" alt="Rust logo"></img>
-<img src="./nom-logo.png" alt="Nom logo"></img>
-<img src="./pest-logo.svg" alt="Pest logo"></img>
+  <img src="./rust-logo.svg" alt="Rust logo"></img>
+  <img src="./nom-logo.png" alt="Nom logo"></img>
+  <img src="./pest-logo.svg" alt="Pest logo"></img>
 </div>
 
 Three main options come to mind when it comes to parsing in Rust: [nom](https://github.com/rust-bakery/nom), [pest](https://pest.rs/) and simple vanilla Rust. Let's compare them.

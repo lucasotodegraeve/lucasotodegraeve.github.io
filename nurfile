@@ -29,7 +29,7 @@ def build [] {
   for file in $content {
     mkdir ($file.output | path dirname)
     if ($file.is_md) {
-      pandoc $file.input -s -o $file.output
+      pandoc $file.input --standalone --output=($file.output) --css="/static/style.css"
     } else {
       cp $file.input $file.output
     }

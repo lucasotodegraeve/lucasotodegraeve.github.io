@@ -11,7 +11,7 @@ Here's a little project I put together. It's a small logic gate simulator built 
 
 If you want to see a more flushed-out version of this idea, I highly recommend [Sebastian League's video series](https://youtube.com/playlist?list=PLFt_AvWsXl0dPhqVsKt1Ni_46ARyiCGSq&si=xtOuDfWtn7T6USgG). In my version, you start by building a small logic network using the provided gates. 
 
-<video style="border-radius: 10px;" autoplay muted loop>
+<video autoplay muted loop>
   <source src="builder.mp4" type="video/mp4">
 </video>
 
@@ -19,7 +19,7 @@ You can move the gates around and create links between them by click-and-draggin
 
 Pressing enter brings you from the building screen to the simulation screen.
 
-<video style="border-radius: 10px;" autoplay muted loop>
+<video autoplay muted loop>
   <source src="runner.mp4" type="video/mp4">
 </video>
 

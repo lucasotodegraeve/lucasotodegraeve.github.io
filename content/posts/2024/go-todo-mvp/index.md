@@ -3,7 +3,7 @@ title: 'A look at Go, Atlas and Nix'
 date: 2024-02-08
 ---
 
-<img style="border-radius: 10px;" src="cover.png"/>
+<img src="cover.png"/>
 
 As an exercise to learn some new technologies, I made a to-do MVP app. These are the technologies I wanted to check out:
 - [Go](https://go.dev/) - a modern and friendly-to-use programming language
@@ -16,7 +16,7 @@ In this post I give them each a mini-review.
 
 The app consists of a PostgreSQL database inside a container whose schema is managed using Atlas. The CLI app is written in Go with [huh](https://github.com/charmbracelet/huh) for the UI and [pq](https://github.com/lib/pq) to interact with the database. Nix is used as a package manager, for the developer environment and as a container image builder. You can view the code [here](https://github.com/lucasotodegraeve/go-todo-mvp).
 
-<video style="border-radius: 10px;" autoplay muted loop>
+<video autoplay muted loop>
   <source src="demo.mp4" type="video/mp4">
 </video>
 
