@@ -19,5 +19,30 @@
         ];
       };
     });
+    packages = forEachSupportedSystem ({pkgs}: {
+      default = let
+        builder = pkgs.writeScriptBin "build.nu" "use ${./nurfile} *; nur build";
+      in
+        pkgs.stdenv.mkDerivation {
+          pname = "website-pages";
+          version = "1.0";
+          src = ./.;
+          nativeBuildInputs = with pkgs; [
+            nushell
+            pandoc
+          ];
+          buildPhase = ''
+            runHook preBuild
+            nu ${builder}/bin/build.nu
+            runHook postBuild
+          '';
+          installPhase = ''
+            runHook preInstall
+            mkdir -p $out/pages
+            cp -r pages/* $out/pages/
+            runHook postInstall
+          '';
+        };
+    });
   };
 }
