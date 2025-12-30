@@ -1,6 +1,6 @@
 ---
 title: 'Comparing Rust parsers'
-date: 2023-11-22T21:13:42+01:00
+date: 2023-11-22
 ---
 
 <style>
