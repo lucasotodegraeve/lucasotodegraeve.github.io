@@ -3,8 +3,16 @@ export def "nur build" [] {
   build
 }
 
-export def "nur watch" [] {
-  watch . --glob=**/*.md {|| build}
+export def "nur watch" [
+  --target="./pages"
+] {
+  let expanded = $target | path expand
+  watch . --debounce 1sec {|op, path|
+    if ($path | path expand | str starts-with $expanded) {
+      return
+    }
+    build
+  }
 }
 
 export def "nur serve" [] {
