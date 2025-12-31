@@ -9,3 +9,9 @@ img, video {
   width: 100%;
   max-width: 100%;
 }
+
+pre {
+  border-radius: 5px;
+  background-color: #efefef;
+  padding: 10px;
+}
