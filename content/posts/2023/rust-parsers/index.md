@@ -177,3 +177,7 @@ Nom is faster still.
 Nom is the fastest of them all, and also pretty easy to use. Pest is pretty slow and lies about it on its main page and the code isn't very pretty. Vanilla code isn't bad but would require more work to be on par with nom.
 
 All the code is available on [github](https://github.com/lucasotodegraeve/rust-parser-comparison).
+
+<a href="https://brainmade.org/">
+	<img class="brainmade" src="/static/brainmade-black.svg"/>
+</a>

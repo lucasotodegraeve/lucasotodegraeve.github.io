@@ -48,3 +48,9 @@ In my initial search for existing projects, I surprisingly found more projects t
 The library works by recursively generating `xsd:elements`. The XML document is built bottom-up. The leaf nodes have simple types such as string, number, list, etc. These simple elements are easy to generate most of the time. However, they can be constrained using a variety of rules, which makes complicates the implementation. The simple types are packaged up inside complex elements. These can themselves be children of other complex elements and so forth.
 
 The biggest challenge is not so much the implementation itself, but rather understanding the XSD specification. I’m not nearly brave enough to read the  [official WS3 specification for XSD](https://www.w3.org/TR/xmlschema11-1/), which is just so complicated to read. ChatGPT was a great help here to give brief descriptions of what is and isn’t allowed.
+
+
+
+<a href="https://brainmade.org/">
+	<img class="brainmade" src="/static/brainmade-black.svg"/>
+</a>

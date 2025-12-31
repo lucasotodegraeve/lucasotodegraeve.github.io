@@ -3,7 +3,6 @@ body {
   margin: 0 auto;
 }
 
-
 img, video {
   border-radius: 10px;
   width: 100%;
@@ -14,4 +13,10 @@ pre {
   border-radius: 5px;
   background-color: #efefef;
   padding: 10px;
+}
+
+.brainmade {
+  margin-top: 50px;
+  width: 100px;
+  border-radius: 0px;
 }

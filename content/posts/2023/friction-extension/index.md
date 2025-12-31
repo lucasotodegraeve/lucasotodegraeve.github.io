@@ -3,8 +3,6 @@ title: 'Add friction to useless browsing'
 date: 2023-12-26
 ---
 
-![](friction-icon.png)
-
 [Friction](https://addons.mozilla.org/en-US/firefox/addon/friction/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search) is a very simple browser extension. It forces you to wait for a short time before accessing blacklisted sites. While this greatly helps against impulse opening YouTube or other time-wasting sites, it still allows patient people to wait until the timer runs out and fuel their bad browsing habits. Mobile apps like [ScreenZen](https://www.screenzen.co/) solve this issue by only allowing you to open blacklisted apps a specified number of times. After some searching, I wasn't able to find a Firefox extension with similar features, so I decided to add them myself.
 
 ## How it works now
@@ -65,5 +63,7 @@ Some other cool features would be:
 - the ability to manage groups of sites, where each group has their own options
 - a youtube specific setting that limits the number of videos you're allowed to watch
 
-![](Written-By-Human-Not-By-AI-Badge-white.svg)
+<a href="https://brainmade.org/">
+	<img class="brainmade" src="/static/brainmade-black.svg"/>
+</a>
 

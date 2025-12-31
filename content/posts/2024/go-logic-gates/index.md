@@ -48,5 +48,7 @@ The following was also needed once I moved the main package into a subdirectory:
 hardeningDisable = [ "all" ];
 ```
 
-
+<a href="https://brainmade.org/">
+	<img class="brainmade" src="/static/brainmade-black.svg"/>
+</a>
 

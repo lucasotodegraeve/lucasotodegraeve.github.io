@@ -61,4 +61,6 @@ The process of making a Go package with Nix [Flakes](https://nixos.wiki/wiki/Fla
 Overall Nix and Flakes, while hard to learn, promise the "It just works" dream. I can't help but feel like every package manager should be more declarative in the future. Therefore it receives a solid 4 stars.
 ⭐⭐⭐⭐
 
-![](Written-By-Human-Not-By-AI-Badge-white.svg)
+<a href="https://brainmade.org/">
+	<img class="brainmade" src="/static/brainmade-black.svg"/>
+</a>
